@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Reseteo de valores*/
+}
+
+
+/* Estilos del (body) y el (header)*/
+
+.unFondo{
+
+    background-image: url('../assets/img/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat
+}
+
+
+.colorPrincipal{
+    background-color: #000000;
+    background: linear-gradient(350deg,#000000 30%, #0004ff 80%);
+    background: -webkit-linear-gradient(350deg,#000000 30%, #0004ff 80%);
+    background: -moz-linear-gradient(350deg,#000000 30%, #0004ff 80%);
+    
+    
+}
+.colorSecundario{
+    background-color: #000000;
+    background: linear-gradient(350deg,#000000 35%, #0004ff 90%);
+    background: -webkit-linear-gradient(350deg,#000000 35%, #0004ff 90%);
+    background: -moz-linear-gradient(350deg,#000000 35%, #0004ff 90%);
+}
+
+.girar a[href="girar"] img {
+    animation: girar 10s linear infinite; /* Aplicando la animación 'girar' durante 10 segundos de manera lineal e infinita */   
+}
+
+@keyframes girar {
+    from {
+        transform: rotateY(-180deg) scale(1); /* Rotación Horizontal inicial */      
+    }
+    to {
+        transform: rotateX(180deg) scale(1.5); /* Rotación Horizontal final */   
+    }
+}
+    
+    
+header{
+    display: flex;
+    justify-content: space-between; /*distribuye los elemento en extremos opuestos horizontalmente. es decir unos del lado derecho y otros del lado izquierdo*/
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100%;
+    
+}
+
+.menu{
+display: flex;
+}
+
+.menu a {
+
+    display: inline-block; /* Cambiado de flex a inline-block para que los botones estén uno al lado del otro */
+    padding: 10px 20px; /* Agrega relleno interno a los botones */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: white; /* Color del texto */
+    margin-right: 10px; /* Ajusta el margen derecho para separar los botones */
+    border-radius: 5px; /* Establece bordes redondeados */
+    color: #eaeaec;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    margin-left: 10px; /* Agrega espacio entre los botones */
+    color: #eaeaec; /* Color del texto del botón */
+
+}
+.menu a:hover {
+    /* Cambia el color de fondo al pasar el cursor sobre el botón */
+    background: -webkit-linear-gradient(220deg,#000000 0%, #0004ff 50%);
+    
+
+
+}
+
+.bloque{
+    padding: 50px;
+}
+.bloque3{
+    padding: 160px;
+}
+
+
+h1, h2, h3, h6 {
+    color: white;
+    font-size: x-large;
+    font-style: italic;
+    text-align: center;
+}
+h4{
+    color: white;
+}
+/* Estilos del (main) de todos los html */
+
+.tituloPrincipal{
+color: #2426b1c9;
+color: linear-gradient(269deg,#2426b1c9 -50%, #000000 80%);
+color: -webkit-linear-gradient(269deg,#2426b1c9 -50%, #000000 80%);
+color: -moz-linear-gradient(269deg,#2426b1c9 -50%, #000000 80%);
+-webkit-text-stroke: 2px #00000065;
+color: #2426b1c9; /* Color del texto */
+    text-shadow: 
+        -1px -1px 0 #c4c4ccc9,  
+        1px -1px 0 #2426b1c9,
+        -1px 1px 0 #2426b1c9,  /* Sombras de texto para simular un borde */
+        1px 1px 0 #2426b1c9;
+
+
+}
+
+
+/* Estilos del (main) del index.html */
+
+.imagenesIndex{
+    text-align: center;
+}
+.imagenesIndex img {
+    height: 400px;
+    width: 550px;
+    margin: 20px;
+    border: 2px solid rgb(26, 12, 146);
+    animation: flotar 5s infinite ease-in-out; 
+    
+}
+
+@keyframes flotar{
+    0%{
+       transform: translateY(0);
+    }
+    50%{
+       transform: translateY(-40PX);
+    }
+    100%{
+       transform: translateY(0);
+    }
+   
+}
+
+.imagenesEquipos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+    & img:hover{ 
+        transition: transform 1s;
+        transform:scale(1.5); 
+    }
+    
+}
+
+
+/* Estilos del (main) del equipos.html */
+.Lakers {
+    text-align: center;
+    background-image: url('../assets/img/EstadioLakers.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat  
+}
+.Lakers h1 {
+    color: yellow;
+}
+
+ 
+ .Boston{
+    text-align: center;
+    background-image: url('../assets/img/EstadioBoston.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat
+ }
+ .Boston h1 {
+    color: green;
+ }
+
+
+
+.imagenesEquipos li {
+
+    display: inline-block;
+    /* Para que los elementos se muestren uno al lado del otro */
+    margin-right: 20px;
+    /* Espacio entre los elementos */
+}
+
+.imagenesEquipos li:last-child {
+    margin-right: 0;
+    /* Quita el margen derecho del último elemento */
+
+}
+
+.imagenesEquipos img {
+    display: block;
+    /* Para que las imágenes no tengan espacio extra debajo de ellas */
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    /*-transform: translateX();*/
+
+}
+
+.imagenesEquipos p {
+    margin-top: 4px;
+    /* Espacio entre la imagen y el texto */
+    color: rgb(204, 203, 212);
+}
+
+/* Estilo para el título que titila para todos los html */
+.deInteres h3.titilante {
+    animation: titilar 3s ease infinite alternate; /* Define la animación */
+   
+}
+
+/* Definición de la animación */
+@keyframes titilar {
+    from {
+        opacity: 1; /* Opacidad inicial */
+    }
+    to {
+        opacity: 0; /* Opacidad final */
+    }
+}
+
+
+
+.deInteres h6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 50px;
+}
+
+.miGif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh; /* Esto asegura que la div ocupe toda la altura del viewport */
+   
+}
+
+
+#registro {
+    max-width: 400px; /* Establece un ancho máximo para el formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    
+    
+}
+
+
+/* Ajusta el tamaño de los elementos de entrada */
+input{
+    background: #0004ff4b;
+    background: linear-gradient(220deg,#0000008f 60%, #0004ff96 40%);
+    background: -webkit-linear-gradient(220deg,#0000008f 60%, #0004ff6b 40%);
+    background: -moz-linear-gradient(220deg,#0000008f 60%, #0004ff96 40%);
+    text-align: center;
+    color: #ffffff;
+    
+
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="button"],
+input[type="reset"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Añade un espacio interno alrededor del contenido */
+    margin-bottom: 10px; /* Añade un margen inferior entre los elementos */
+    
+
+
+}
+.misBotones{
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center; 
+    width: 8%;
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+   
+     
+    .colorCuarto{
+        background: rgba(4, 8, 26, 0.842); 
+        color: rgb(208, 205, 226); 
+        border: none; /* Elimina el borde */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        padding: 10px 10px; /* Ajusta el espacio interno del botón */
+        
+        
+    }
+}
+.misBotones :hover{   
+        transition: transform 1s;
+        transform:scale(1.1); 
+}
+.nacimiento{
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center; 
+    width: 15%;
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    color: rgb(251, 251, 253); 
+}
+
+
+/* Estilo para el botón de guardar y limpiar */
+.colorTerciario {
+    background: rgba(31, 30, 30, 0.705); 
+    color: rgb(156, 156, 175); 
+    border: none; /* Elimina el borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    padding: 10px 10px; /* Ajusta el espacio interno del botón */
+    
+    
+}
+
+
+
+
+/* Estilos del (footer) para todos los html*/
+
+footer{
+background-color: #0004ff;
+background: linear-gradient(360deg,#000000 35%, #0004ff 90%);
+background: -webkit-linear-gradient(360deg,#000000 35%, #0004ff 90%);
+background: -moz-linear-gradient(360deg,#000000 35%, #0004ff 90%);
+
+
+
+
+
+}
+.pieDePagina{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(245, 243, 243)
+    
+}
+
+/* Estilo para el contenedor */
+.redes {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/* Estilo para las imágenes */
+.redes img {
+    max-width: 50px; /* es el un ancho máximo para todas las imágenes */
+    margin-right: 5px; /* Ajusta el margen entre las imágenes */
+    
+}
+
+.LebronJames2{
+    position: relative; /* Opciones: static (valor por defecto), relative, absolute, fixed, sticky */
+    top: 50px; /* Desplazar hacia abajo */
+    left: 220px; /* Desplazar hacia la derecha */
+
+}
+
+
+
+
+
+
+/*/.container {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+  }*/
+  
+  /*.basketball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../assets/img/balon2760.png');
+    background-size: cover;
+    animation: caida-balones 2s linear infinite;
+  }
+  
+  @keyframes caida-balones {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }*/
